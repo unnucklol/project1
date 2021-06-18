@@ -493,8 +493,10 @@ body {
 
 .programs__title {
   font-family: "Spectral";
+  position: relative;
   font-size: 4rem;
   line-height: 100%;
+  padding-top: 3rem;
   text-transform: uppercase;
   margin-bottom: 4rem;
   letter-spacing: 0.5rem;
@@ -1573,6 +1575,10 @@ body {
     font-size: 2.6rem;
   }
 
+  .programs {
+    padding-top: 54rem;
+  }
+
   .programs::after {
     display: none;
   }
@@ -1594,6 +1600,21 @@ body {
     font-size: 4rem;
     line-height: 120%;
     text-align: center;
+  }
+
+  .programs__title::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../img/intro-mobile-bckg.png");
+    background-repeat: no-repeat;
+    width: 55rem;
+    height: 57rem;
+    background-size: contain;
+    -webkit-transform: translate(-2%, -100%) rotate(-4deg);
+    -ms-transform: translate(-2%, -100%) rotate(-4deg);
+    transform: translate(-2%, -100%) rotate(-4deg);
   }
 
   .programs__block {
@@ -1892,3 +1913,8 @@ body {
 .webp .footer::before { background-image: url(../img/footer-bckg.webp); }
 
 .webp .info-footer__link::before { background-image: url(../img/instagram.webp); }
+
+@media screen and (max-width: 767px) {
+
+  .webp .programs__title::after { background-image: url(../img/intro-mobile-bckg.webp); }
+}
